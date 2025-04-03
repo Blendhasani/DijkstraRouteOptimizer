@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using DijkstraRouteOptimizer;
+﻿using DijkstraRouteOptimizer;
 
 var graph = new Dictionary<int, List<(int, int)>>()
 {
