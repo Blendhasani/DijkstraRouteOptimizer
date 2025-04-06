@@ -10,9 +10,7 @@ namespace DijkstraRouteOptimizer
 	{
 		// Method to find the shortest paths from the source node to all other nodes
 
-		public static Dictionary<int, int> FindShortestPaths(
-			Dictionary<int, List<(int neighbor, int weight)>> graph,
-			int source)
+		public static Dictionary<int, int> FindShortestPaths(Dictionary<int, List<(int neighbor, int weight)>> graph, int source)
 		{
 			// Initialize distances to all nodes as infinite (int.MaxValue)
 			var distances = new Dictionary<int, int>();
@@ -31,8 +29,8 @@ namespace DijkstraRouteOptimizer
 			{
 				// Get the node with the smallest known distance
 				var (currentDist, currentNode) = priorityQueue.First();
-				priorityQueue.Remove(priorityQueue.First());
 
+				priorityQueue.Remove(priorityQueue.First());
 
 				// Check all neighbors of the current node
 				foreach (var (neighbor, weight) in graph[currentNode])
